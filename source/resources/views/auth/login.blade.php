@@ -47,11 +47,12 @@
                                 </dl>
                                 <dl>
                                     <dd>
-                                        <input type="submit" name="login" tabindex="6" value="Login" class="button1" />
+                                        <input type="submit" value="Login" class="button1" />
                                     </dd>
                                     </dd>
                                 </dl>
                             </fieldset>
+                            <p>No user account? <a href="{{url('register')}}">Click here</a> for registration or go <a href="{{url('/')}}">home</a>.</p>
                         </div>
                     </div>
                 </div>

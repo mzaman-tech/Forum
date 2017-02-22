@@ -68,6 +68,7 @@
                                     </dd>
                                 </dl>
                             </fieldset>
+                            <p>Already have a user account? <a href="{{url('login')}}">Click here</a> to login or go <a href="{{url('/')}}">home</a>.</p>
                         </div>
                     </div>
                 </div>

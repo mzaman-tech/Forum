@@ -22,21 +22,22 @@
             <div class="navbar" role="navigation">
                 <div class="inner">
                     <ul id="nav-main" class="linklist bulletin" role="menubar">                     
-                        <li class="small-icon icon-search"><a href="">Search</a></li>
+                        <li class="small-icon icon-search"><a href="{{url('search')}}">Search</a></li>
                         @if(Auth::check())<li><a href="">Welcome {{Auth::user()->name}}</a></li>
                         <li class="small-icon icon-logout rightside" data-skip-responsive="true"><a href="{{url('/logout')}}" role="menuitem">Logout</a>
                         </li> 
-                        <li class="small-icon rightside" data-skip-responsive="true"><a href="{{url('/')}}" role="menuitem">Change Avatar</a>
+                        <li class="small-icon icon-team rightside" data-skip-responsive="true"><a href="{{url('avatar/edit/')}}" role="menuitem">Change Avatar</a>
                         </li>
                         @else
                         <li class="small-icon icon-logout rightside" data-skip-responsive="true"><a href="{{url('/login')}}" role="menuitem">Login</a>
                         </li> 
                         <li class="small-icon icon-register rightside" data-skip-responsive="true"><a href="{{url('/register')}}" role="menuitem">Register</a>
                         @endif
+                        <li class="small-icon icon-home responsive-menu rightside" data-skip-responsive="true"><a href="{{url('/')}}" role="menuitem">Home</a>
                     </ul>
                     <ul id="nav-breadcrumbs" class="linklist navlinks" role="menubar">
-                        <li class="small-icon icon-home breadcrumbs"> 
-                        <span class="crumb"><a href=""><span>Board index</span></a>
+                        <li class="small-icon breadcrumbs"> 
+                        <span class="crumb"><a href="{{url('/thread')}}"><span>Write Thread</span></a>
                             </span>
                         </li>
                         

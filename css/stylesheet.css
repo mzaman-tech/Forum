@@ -14,3 +14,11 @@
 	padding-left: 58px;
 	padding-top: 58px;
 }
+
+.info_message {
+	color: blue;
+}
+
+.success_message {
+	color: green;
+}

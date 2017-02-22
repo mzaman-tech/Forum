@@ -23,4 +23,23 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+
+    /**
+     * Get the threads for the user.
+     */
+    public function threads()
+    {
+        return $this->hasMany('App\Thread');
+    }
+
+
+    /**
+     * The comments that belong to the user.
+     */
+    public function comments()
+    {
+        return $this->belongsTo('App\Comment');
+    }
+
 }

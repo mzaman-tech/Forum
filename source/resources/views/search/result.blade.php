@@ -1,19 +1,16 @@
 @extends('layouts.app') @section('content')
 
-@foreach($topics as $topic)
-
-
 <div class="forabg">
     <div class="inner">
         <ul class="topiclist">
             <li class="header">
-                <dl class="icon"> <dt><div class="list-inner"><a href="#">{{$topic->name}}</a></div></dt>
+                <dl class="icon"> <dt><div class="list-inner"><a href="#">Search Result </a></div></dt>
                     </dd>
                 </dl>
             </li>
         </ul>
         <ul class="topiclist forums">
-            @foreach($threads[$topic->id] as $thread)
+            @foreach($threads as $thread)
                 <li class="row">
                     <dl class="icon forum_read"> 
                         <dt title="No unread posts">
@@ -32,7 +29,7 @@
                             </div>
                         </dt>
                         <dd class="lastpost"><span>
-                                <a href="#">By: {{$thread->user->name}}</a><br />
+                                <a href="#">By: {{$thread->name}}</a><br />
                                 Posted at: {{date("d M Y h:i:s", strtotime($thread->created_at))}}<br />
                                 @if(!is_null($thread->updated_at))
                                     Last Updated: {{date("d M Y h:i:s", strtotime($thread->updated_at))}}</span>
@@ -45,8 +42,5 @@
         </ul>
     </div>
 </div>
-
-
-@endforeach
 
 @endsection
