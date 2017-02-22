@@ -140,6 +140,7 @@ class ThreadController extends Controller
         $thread->title = $request->title;
         $thread->summary = $request->summary;
         $thread->description = $request->description;
+        $thread->updated_at = date('Y-m-d h:i:s');
         $thread->save();
 
         Session::flash('success_message', 'Your thread has been updated.');

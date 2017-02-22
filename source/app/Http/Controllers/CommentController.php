@@ -96,6 +96,7 @@ class CommentController extends Controller
     	$comment = Comment::find($request->comment_id);
     	$this->checkValidParameter($comment);
     	$comment->message = $request->message;
+        $comment->updated_at = date('Y-m-d h:i:s');
     	$comment->save();
 
     	Session::flash('success_message', 'Your comment has been updated.');
